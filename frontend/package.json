@@ -1,0 +1,66 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^12.1.5",
+    "@testing-library/user-event": "13.x",
+    "@types/jest": "^27.5.2",
+    "@types/jwt-decode": "^3.1.0",
+    "@types/node": "^16.11.48",
+    "@types/qs": "^6.9.7",
+    "@types/react": "17.0.0",
+    "@types/react-dom": "17.0.0",
+    "@types/react-paginate": "^7.1.1",
+    "@types/react-router-dom": "^5.1.7",
+    "@types/react-select": "^5.0.1",
+    "@types/testing-library__react": "^10.2.0",
+    "axios": "^0.27.2",
+    "bootstrap": "^5.2.0",
+    "gh-pages": "^4.0.0",
+    "jwt-decode": "^3.1.2",
+    "msw": "^0.47.4",
+    "node-sass": "^7.0.3",
+    "qs": "^6.11.0",
+    "react": "17.0.2",
+    "react-content-loader": "^6.2.0",
+    "react-currency-input-field": "^3.6.5",
+    "react-dom": "17.0.2",
+    "react-hook-form": "^7.39.3",
+    "react-paginate": "^7.1.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "5.0.1",
+    "react-select": "^5.4.0",
+    "react-select-event": "^5.5.1",
+    "react-toastify": "^9.0.8",
+    "testing-library": "^0.0.2",
+    "typescript": "^4.7.4",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --watchAll=false --testPathIgnorePatterns='fixtures.ts'",
+    "test:watch": "react-scripts test --testPathIgnorePatterns='fixtures.ts'",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

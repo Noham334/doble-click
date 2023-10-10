@@ -1,0 +1,23 @@
+.product-crud-container {
+  max-width: 1200px;
+}
+
+.product-crud-bar-container {
+  margin-bottom: 30px;
+}
+
+.product-crud-item-container {
+  padding-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  .product-crud-bar-container {
+    display: flex;
+    margin-bottom: 30px;
+  }
+
+  .product-crud-bar-container a {
+    margin-right: 30px;
+  }
+
+}
