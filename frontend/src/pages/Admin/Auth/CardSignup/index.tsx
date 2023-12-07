@@ -36,11 +36,11 @@ const CardSignup = () => {
 
     requestBackend(config)
       .then(() => {
-        toast.info('Usuário Cadastrado com Sucesso');
+        toast.info('Usuário registrado!');
         history.push('/admin/users');
       })
       .catch(() => {
-        toast.error('Erro ao Cadastrar Usuário');
+        toast.error('Error al registrar usuário');
       });
   };
 
@@ -62,7 +62,7 @@ const CardSignup = () => {
       )
         ? setError('password', {
             type: 'validate',
-            message: 'As senhas não correspondem',
+            message: 'Las contraseñas no coinciden',
           })
         : clearErrors('password');
     }
@@ -70,18 +70,18 @@ const CardSignup = () => {
 
   return (
     <div className="base-card signup-card-container">
-      <h1>CADASTRO</h1>
+      <h1>REGISTRO</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="signup-card-input-content">
           <input
             {...register('firstName', {
-              required: 'Campo Obrigatório!',
+              required: 'Campo Obligatorio!',
             })}
             type="text"
             className={`form-control base-input ${
               errors.firstName ? 'is-invalid' : ''
             }`}
-            placeholder="Nome"
+            placeholder="Nombres"
             name="firstName"
           />
           <div className="invalid-feedback d-block">
@@ -92,13 +92,13 @@ const CardSignup = () => {
         <div className="signup-card-input-content">
           <input
             {...register('lastName', {
-              required: 'Campo Obrigatório!',
+              required: 'Campo Obligatorio!',
             })}
             type="text"
             className={`form-control base-input ${
               errors.lastName ? 'is-invalid' : ''
             }`}
-            placeholder="Sobrenome"
+            placeholder="Apellidos"
             name="lastName"
           />
           <div className="invalid-feedback d-block">
@@ -109,13 +109,13 @@ const CardSignup = () => {
         <div className="signup-card-input-content">
           <input
             {...register('email', {
-              required: 'Campo Obrigatório!',
+              required: 'Campo Obligatorio!',
             })}
             type="text"
             className={`form-control base-input ${
               errors.email ? 'is-invalid' : ''
             }`}
-            placeholder="Email"
+            placeholder="Correo electronico"
             name="email"
           />
           <div className="invalid-feedback d-block">
@@ -127,11 +127,11 @@ const CardSignup = () => {
           <div className="signup-card-input-password-container">
             <input
               {...register('password', {
-                required: 'Campo Obrigatório!',
+                required: 'Campo Obligatorio!',
                 pattern: {
                   value: /^(?=.*\d).{8,50}$/,
                   message:
-                    'Senha deve ter entre 7 e 50 caracteres e conter ao menos 1 número',
+                    'Contraseña debe contener de 7 a 50 caracteres y como mínimo un numero',
                 },
               })}
               id="nPassword"
@@ -139,7 +139,7 @@ const CardSignup = () => {
               className={`form-control signup-card-input ${
                 errors.password ? 'is-invalid' : ''
               }`}
-              placeholder={'Defina uma Senha'}
+              placeholder={'Defina una contraseña'}
               name="password"
               onChange={confirmPassword}
             />
@@ -162,7 +162,7 @@ const CardSignup = () => {
               className={`form-control signup-card-input ${
                 errors.password ? 'is-invalid' : ''
               }`}
-              placeholder={'Confirme a Senha'}
+              placeholder={'Confirme la contraseña'}
               name="confirmPassword"
               onChange={confirmPassword}
             />
@@ -179,7 +179,7 @@ const CardSignup = () => {
 
         <div className="signup-card-buttons-container">
           <button className="btn btn-primary signup-card-button text-white">
-            CADASTRAR
+            REGISTRAR
           </button>
           <button
             className="btn btn-outline-danger signup-card-button"

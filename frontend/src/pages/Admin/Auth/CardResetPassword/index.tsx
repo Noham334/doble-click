@@ -49,12 +49,12 @@ const CardResetPassword = ({ passwordResetToken }: Props) => {
 
     requestBackend(config)
       .then(() => {
-        toast.info('Senha alterada com sucesso');
+        toast.info('Se alteró la contraseña');
         history.push('/admin/auth/login');
         removePasswordResetTokenLocalStorage();
       })
       .catch(() => {
-        toast.error('Erro ao Alterar sua senha');
+        toast.error('Error al Alterar contraseña');
       });
   };
 
@@ -76,7 +76,7 @@ const CardResetPassword = ({ passwordResetToken }: Props) => {
       )
         ? setError('password', {
             type: 'validate',
-            message: 'As senhas não correspondem',
+            message: 'Las contraseñas no coinciden!',
           })
         : clearErrors('password');
     }
@@ -85,21 +85,21 @@ const CardResetPassword = ({ passwordResetToken }: Props) => {
   return (
     <div className="base-card reset-password-card-container">
       <div className="reset-password-card-form-container">
-        <h1>CRIE UMA NOVA SENHA</h1>
+        <h1>CREAR NUEVA CONTRASEÑA</h1>
 
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="reset-password-card-input-content">
             <div className="reset-password-card-input-container">
               <input
                 {...register('password', {
-                  required: 'Campo Obrigatório!',
+                  required: 'Campo Obligatorio!',
                 })}
                 id="nPassword"
                 type={inputTypePass ? 'text' : 'password'}
                 className={`form-control reset-password-card-input ${
                   errors.password ? 'is-invalid' : ''
                 }`}
-                placeholder="Digite uma nova senha"
+                placeholder="Ingrese una nueva contraseña"
                 name="password"
               />
               <span className="reset-password-card-reveal-icon">
@@ -121,7 +121,7 @@ const CardResetPassword = ({ passwordResetToken }: Props) => {
                 className={`form-control reset-password-card-input ${
                   errors.password ? 'is-invalid' : ''
                 }`}
-                placeholder="Confirme sua nova senha"
+                placeholder="Confirma su nueva contraseña"
                 name="confPassword"
                 onChange={confirmPassword}
               />

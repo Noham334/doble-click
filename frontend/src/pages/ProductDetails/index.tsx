@@ -37,7 +37,7 @@ const ProductDetails = () => {
         <div className="goback-container">
           <Link to={'/products'} className="goback-container-link">
             <ArrowIcon />
-            <h2>VOLTAR</h2>
+            <h2>VOLVER</h2>
           </Link>
         </div>
         <div className="row">
@@ -61,7 +61,7 @@ const ProductDetails = () => {
               <ProductDetailsLoarder />
             ) : (
               <div className="description-container">
-                <h2>Descrição do Produto</h2>
+                <h2>Descripción del Producto</h2>
                 <p>{product?.description}</p>
               </div>
             )}

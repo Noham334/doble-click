@@ -68,7 +68,7 @@ const CategoryFilter = ({ onSubmitFilter }: Props) => {
             {...register('textInput')}
             type="text"
             className="form-control"
-            placeholder="Pesquisar Categoria"
+            placeholder="Buscar Categoria"
             name="textInput"
           />
           <button className="category-filter-search-icon">
@@ -84,9 +84,9 @@ const CategoryFilter = ({ onSubmitFilter }: Props) => {
                 <Select
                   {...field}
                   options={[
-                    { id: 1, name: 'Mais Antigos' },
-                    { id: 2, name: 'Mais Recentes' },
-                    { id: 3, name: 'Ordem Alfabética' },
+                    { id: 1, name: 'Mas Antiguos' },
+                    { id: 2, name: 'Mas Recientes' },
+                    { id: 3, name: 'ABC...' },
                   ]}
                   isClearable
                   classNamePrefix="category-filter-select"
@@ -104,7 +104,7 @@ const CategoryFilter = ({ onSubmitFilter }: Props) => {
             onClick={handleFormClear}
             className="btn btn-outline-secondary btn-category-filter-clear"
           >
-            LIMPAR <span className="btn-category-filter-word">FILTRO</span>
+            LIMPIAR <span className="btn-category-filter-word">FILTRO</span>
           </button>
         </div>
       </form>

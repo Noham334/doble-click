@@ -13,7 +13,7 @@ type Props = {
 
 const ProductCrudCard = ({ product, onDelete }: Props) => {
   const handleDelete = (productId: number) => {
-    if (!window.confirm('Tem certeza que seja Excluir esse produto?')) {
+    if (!window.confirm('¿Está seguro que quiere eliminar este producto?')) {
       return;
     }
 
@@ -51,7 +51,7 @@ const ProductCrudCard = ({ product, onDelete }: Props) => {
           onClick={() => handleDelete(product.id)}
           className="btn btn-outline-danger product-crud-card-button product-crud-card-button-first"
         >
-          EXCLUIR
+          ELIMINAR
         </button>
         <Link to={`/admin/products/${product.id}`}>
           <button className="btn btn-outline-secondary product-crud-card-button">

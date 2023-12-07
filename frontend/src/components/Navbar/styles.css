@@ -36,6 +36,10 @@
   display: none;
 }
 
+.image-logo {
+  width: 70px;
+}
+
 @media (max-width: 319px) {
   .main-nav {
     padding: 10px 0;

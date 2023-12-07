@@ -80,8 +80,8 @@ const List = () => {
       <div className="category-crud-content">
         <div className="category-crud-bar-container">
           <Link to="/admin/categories/create">
-            <button className="btn btn-primary text-white btn-crud-add">
-              ADICIONAR
+            <button className="btn btn-secondary text-white btn-crud-add">
+              AGREGAR
             </button>
           </Link>
           <CategoryFilter onSubmitFilter={handleSubmitFilter} />

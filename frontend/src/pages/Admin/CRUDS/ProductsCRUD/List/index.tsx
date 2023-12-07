@@ -59,8 +59,8 @@ const List = () => {
     <div className="product-crud-container">
       <div className="product-crud-bar-container">
         <Link to="/admin/products/create">
-          <button className="btn btn-primary text-white btn-crud-add">
-            ADICIONAR
+          <button className="btn btn-secondary text-white btn-crud-add">
+            AGREGAR
           </button>
         </Link>
         <ProductFilter onSubmitFilter={handleSubmitFilter} />

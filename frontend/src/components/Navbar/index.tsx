@@ -8,6 +8,7 @@ import { AuthContext } from 'AuthContext';
 import { isAuthenticated } from 'util/auth';
 import { removeAuthData } from 'util/storage';
 import { getTokenData } from 'util/token';
+import Logo from './descarga.png';
 
 const Navbar = () => {
   const { authContextData, setAuthContextData } = useContext(AuthContext);
@@ -37,8 +38,9 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-md navbar-dark bg-primary main-nav">
       <div className="container-fluid">
-        <Link to={'/'} className="nav-logo-text">
-          <h4>DS Catalog</h4>
+        <Link to={'/'} className="nav-logo-text d-flex align-items-center">
+          <img src={Logo} alt="" className="image-logo" />
+          <h4>Doble Click</h4>
         </Link>
 
         <button
@@ -57,7 +59,7 @@ const Navbar = () => {
           <ul className="navbar-nav offset-md-2 main-menu">
             <li>
               <NavLink to="/" activeClassName="active" exact>
-                HOME
+                INICIO
               </NavLink>
             </li>
             <li>
@@ -84,7 +86,7 @@ const Navbar = () => {
               </a>
             </>
           ) : (
-            <Link to="/admin/auth">LOGIN</Link>
+            <Link to="/admin/auth">ENTRAR</Link>
           )}
         </div>
       </div>

@@ -74,11 +74,11 @@ const Form = () => {
 
     requestBackend(config)
       .then(() => {
-        toast.info('Produto Cadastrado com Sucesso');
+        toast.info('Producto Registrado con Éxito');
         history.push('/admin/products');
       })
       .catch(() => {
-        toast.error('Erro ao Cadastrar Produto');
+        toast.error('Error al Registrar Producto');
       });
   };
 
@@ -89,20 +89,20 @@ const Form = () => {
   return (
     <div className="product-crud-container">
       <div className="base-card product-crud-form-card">
-        <h1 className="product-crud-form-title">DADOS DO PRODUTO</h1>
+        <h1 className="product-crud-form-title">INFORMACION DEL PRODUCTO</h1>
         <form onSubmit={handleSubmit(onSubmit)} data-testid="form">
           <div className="row product-crud-inputs-container">
             <div className="col-lg-6 product-crud-inputs-left-container">
               <div className="margin-botton-30">
                 <input
                   {...register('name', {
-                    required: 'Campo Obrigatório',
+                    required: 'Campo Obligatório',
                   })}
                   type="text"
                   className={`form-control base-input ${
                     errors.name ? 'is-invalid' : ''
                   }`}
-                  placeholder="Nome do Produto"
+                  placeholder="Nombre del Producto"
                   name="name"
                   data-testid="name"
                 />
@@ -136,7 +136,7 @@ const Form = () => {
                 />
                 {errors.categories && (
                   <div className="invalid-feedback d-block">
-                    Campo Obrigatório
+                    Campo Obligatorio
                   </div>
                 )}
               </div>
@@ -144,11 +144,11 @@ const Form = () => {
               <div className="margin-botton-30">
                 <Controller
                   name="price"
-                  rules={{ required: 'Campo Obrigatório' }}
+                  rules={{ required: 'Campo Obligatorio' }}
                   control={control}
                   render={({ field }) => (
                     <CurrencyInput
-                      placeholder="Preço"
+                      placeholder="Precio"
                       className={`form-control base-input ${
                         errors.name ? 'is-invalid' : ''
                       }`}
@@ -188,10 +188,10 @@ const Form = () => {
 
               <div className="margin-botton-20 product-crud-button-add-image">
                 <button className="btn btn-secondary text-white">
-                  ADICIONAR IMAGEM
+                  AGREGAR IMAGEM
                 </button>
                 <p>
-                  A imagem deve ser JPG ou PNG e não deve ultrapassar
+                  La imagen debe ser un JGP o PNG y no debe sobrepasar los
                   <b> 5 mb.</b>
                 </p>
               </div>
@@ -210,12 +210,12 @@ const Form = () => {
                 <textarea
                   rows={10}
                   {...register('description', {
-                    required: 'Campo Obrigatório',
+                    required: 'Campo Obligatorio',
                   })}
                   className={`form-control base-input h-auto ${
                     errors.name ? 'is-invalid' : ''
                   }`}
-                  placeholder="Descrição"
+                  placeholder="Descripción"
                   name="description"
                   data-testid="description"
                 />
@@ -226,8 +226,8 @@ const Form = () => {
             </div>
           </div>
           <div className="product-crud-buttons-container">
-            <button className="btn btn-primary product-crud-button text-white">
-              SALVAR
+            <button className="btn btn-secondary product-crud-button text-white">
+              GUARDAR
             </button>
             <button
               className="btn btn-outline-danger product-crud-button"

@@ -71,11 +71,11 @@ const Form = () => {
 
     requestBackend(config)
       .then(() => {
-        toast.info('Usuário Cadastrado com Sucesso');
+        toast.info('Usuario Registrado con Éxito');
         history.push('/admin/users');
       })
       .catch(() => {
-        toast.error('Erro ao Cadastrar Usuário');
+        toast.error('Error al Registrar Usuario');
       });
   };
 
@@ -97,7 +97,7 @@ const Form = () => {
       )
         ? setError('password', {
             type: 'validate',
-            message: 'As senhas não correspondem',
+            message: 'Las contraseñas no coinciden',
           })
         : clearErrors('password');
     }
@@ -107,7 +107,7 @@ const Form = () => {
     <div className="user-crud-container">
       <div className="base-card user-crud-form-card">
         <h1 className="user-crud-form-title">
-          {isEditing ? 'ATUALIZAR CADASTRO' : 'CADASTRAR USUÁRIO'}
+          {isEditing ? 'ACTUALIZAR REGISTRO' : 'REGISTRAR USUARIO'}
         </h1>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="user-crud-inputs-container">
@@ -115,13 +115,13 @@ const Form = () => {
               <div className="user-crud-input">
                 <input
                   {...register('firstName', {
-                    required: 'Campo Obrigatório!',
+                    required: 'Campo Obligatorio!',
                   })}
                   type="text"
                   className={`form-control base-input ${
                     errors.firstName ? 'is-invalid' : ''
                   }`}
-                  placeholder="Nome"
+                  placeholder="Nombre"
                   name="firstName"
                 />
                 <div className="invalid-feedback d-block">
@@ -132,13 +132,13 @@ const Form = () => {
               <div className="user-crud-input">
                 <input
                   {...register('lastName', {
-                    required: 'Campo Obrigatório!',
+                    required: 'Campo Obligatorio!',
                   })}
                   type="text"
                   className={`form-control base-input ${
                     errors.lastName ? 'is-invalid' : ''
                   }`}
-                  placeholder="Sobrenome"
+                  placeholder="Apellido"
                   name="lastName"
                 />
                 <div className="invalid-feedback d-block">
@@ -150,13 +150,13 @@ const Form = () => {
             <div className="user-crud-input-email">
               <input
                 {...register('email', {
-                  required: 'Campo Obrigatório!',
+                  required: 'Campo Obligatorio!',
                 })}
                 type="text"
                 className={`form-control base-input ${
                   errors.email ? 'is-invalid' : ''
                 }`}
-                placeholder="Email"
+                placeholder="Correo"
                 name="email"
               />
               <div className="invalid-feedback d-block">
@@ -169,11 +169,11 @@ const Form = () => {
                 <div className="user-crud-input-password-container">
                   <input
                     {...register('password', {
-                      required: 'Campo Obrigatório!',
+                      required: 'Campo Obligatorio!',
                       pattern: {
                         value: /^(?=.*\d).{8,50}$/,
                         message:
-                          'Senha deve ter entre 7 e 50 caracteres e conter ao menos 1 número',
+                          'Contraseña debe tener entre 7 y 50 caracteres y por lo menos un numero',
                       },
                     })}
                     id="nPassword"
@@ -182,7 +182,7 @@ const Form = () => {
                       errors.password ? 'is-invalid' : ''
                     }`}
                     placeholder={
-                      isEditing ? 'Alterar a Senha' : 'Defina uma Senha'
+                      isEditing ? 'Modificar Contraseña' : 'Definir Ccontraseña'
                     }
                     name="password"
                     onChange={confirmPassword}
@@ -207,7 +207,9 @@ const Form = () => {
                       errors.password ? 'is-invalid' : ''
                     }`}
                     placeholder={
-                      isEditing ? 'Confirme a Nova Senha' : 'Confirme a Senha'
+                      isEditing
+                        ? 'Confirmar Nueva Contraseña'
+                        : 'Confirmar Contraseña'
                     }
                     name="confirmPassword"
                     onChange={confirmPassword}
@@ -235,7 +237,7 @@ const Form = () => {
                     options={selectRoles}
                     classNamePrefix="product-crud-select"
                     isMulti
-                    placeholder="Perfil do Usuário..."
+                    placeholder="Perfil del Usuário..."
                     getOptionLabel={(role: RoleData) =>
                       role.authority
                         .split('_', 2)[1]
@@ -248,13 +250,13 @@ const Form = () => {
               />
               {errors.roles && (
                 <div className="invalid-feedback d-block">
-                  Campo Obrigatório!
+                  Campo Obligatorio!
                 </div>
               )}
             </div>
             <div className="user-crud-buttons-container">
-              <button className="btn btn-primary user-crud-button text-white">
-                SALVAR
+              <button className="btn btn-secondary user-crud-button text-white">
+                GUARDAR
               </button>
               <button
                 className="btn btn-outline-danger user-crud-button"

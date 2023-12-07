@@ -64,7 +64,7 @@ const ProductFilter = ({ onSubmitFilter }: Props) => {
             {...register('name')}
             type="text"
             className="form-control"
-            placeholder="Pesquisar Produto"
+            placeholder="Buscar Producto"
             name="name"
           />
           <button className="product-filter-search-icon">
@@ -94,7 +94,7 @@ const ProductFilter = ({ onSubmitFilter }: Props) => {
             onClick={handleFormClear}
             className="btn btn-outline-secondary btn-product-filter-clear"
           >
-            LIMPAR <span className="btn-product-filter-word">FILTRO</span>
+            LIMPIAR <span className="btn-product-filter-word">FILTRO</span>
           </button>
         </div>
       </form>

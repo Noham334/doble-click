@@ -8,7 +8,7 @@ const Navbar = () => {
       <ul className="admin-nav-itens-container">
         <li>
           <NavLink to="/admin/products" className="admin-nav-item default">
-            <p>Produtos</p>
+            <p>Productos</p>
           </NavLink>
         </li>
         <li>
@@ -19,7 +19,7 @@ const Navbar = () => {
         {hasAnyRoles(['ROLE_ADMIN']) && (
           <li>
             <NavLink to="/admin/users" className="admin-nav-item">
-              <p>Usuários</p>
+              <p>Reporte Usuários</p>
             </NavLink>
           </li>
         )}

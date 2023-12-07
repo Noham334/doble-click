@@ -35,14 +35,14 @@ const userCrudCard = ({ user, onDelete }: Props) => {
       <div className="user-crud-card-buttons-container">
         <Link to={`/admin/users/${user.id}`}>
           <button className="btn btn-outline-secondary user-crud-card-button">
-            EDITAR
+            VER REPORTE
           </button>
         </Link>
         <button
           onClick={() => handleDelete(user.id)}
           className="btn btn-outline-danger user-crud-card-button"
         >
-          EXCLUIR
+          ELIMINAR
         </button>
       </div>
     </div>

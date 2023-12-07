@@ -47,11 +47,11 @@ const Form = () => {
 
     requestBackend(config)
       .then(() => {
-        toast.info('Categoria Cadastrada com Sucesso');
+        toast.info('Categoria Registrada con exito');
         history.push('/admin/categories');
       })
       .catch(() => {
-        toast.error('Erro ao Cadastrar Categoria');
+        toast.error('Error al Registrar Categoria');
       });
   };
 
@@ -62,7 +62,9 @@ const Form = () => {
   return (
     <div className="category-crud-container">
       <div className="base-card category-crud-form-card">
-        <h1 className="category-crud-form-title">DADOS DA CATEGORIA</h1>
+        <h1 className="category-crud-form-title">
+          INFORMACION DE LA CATEGORIA
+        </h1>
         <form
           className="category-crud-form-container"
           onSubmit={handleSubmit(onSubmit)}
@@ -70,13 +72,13 @@ const Form = () => {
           <div className="category-crud-input-container">
             <input
               {...register('name', {
-                required: 'Campo Obrigatório',
+                required: 'Campo Obligatório',
               })}
               type="text"
               className={`form-control base-input ${
                 errors.name ? 'is-invalid' : ''
               }`}
-              placeholder="Nome da Categoria"
+              placeholder="Nombre de la Categoria"
               name="name"
             />
             <div className="invalid-feedback d-block">
@@ -85,7 +87,7 @@ const Form = () => {
           </div>
           <div className="category-crud-buttons-container">
             <button className="btn btn-primary category-crud-button text-white">
-              SALVAR
+              GUARDAR
             </button>
             <button
               className="btn btn-outline-danger category-crud-button"

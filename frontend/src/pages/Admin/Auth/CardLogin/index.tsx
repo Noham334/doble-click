@@ -53,23 +53,23 @@ const CardLogin = () => {
       <form onSubmit={handleSubmit(onSubmit)}>
         {hasError && (
           <div className="alert alert-danger" role="alert">
-            Erro ao tentar efetuar o login!!!
+            Error al intentar efectuar el login!!!
           </div>
         )}
         <div className="input-email">
           <input
             {...register('username', {
-              required: 'Campo Obrigatório',
+              required: 'Campo Obligatorio',
               pattern: {
                 value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                message: 'Email inválido',
+                message: 'Correo inválido',
               },
             })}
             type="text"
             className={`form-control base-input ${
               errors.username ? 'is-invalid' : ''
             }`}
-            placeholder="Email"
+            placeholder="Correo"
             name="username"
           />
           <div className="invalid-feedback d-block">
@@ -79,13 +79,13 @@ const CardLogin = () => {
         <div className="input-password">
           <input
             {...register('password', {
-              required: 'Campo Obrigatório',
+              required: 'Campo Obligatorio',
             })}
             type="password"
             className={`form-control base-input ${
               errors.password ? 'is-invalid' : ''
             }`}
-            placeholder="Password"
+            placeholder="Contraseña"
             name="password"
           />
           <div className="invalid-feedback d-block">
@@ -93,15 +93,15 @@ const CardLogin = () => {
           </div>
         </div>
         <Link to="/admin/auth/recover" className="login-link-recover">
-          Esqueci a senha
+          Olvidé mi contraseña
         </Link>
         <div className="login-submit">
-          <ButtonIcon text="Fazer login" />
+          <ButtonIcon text="Hacer login" />
         </div>
         <div className="signup-container">
-          <span className="not-registered">Não tem Cadastro?</span>
+          <span className="not-registered">¿No está Registrado?</span>
           <Link to="/admin/auth/signup" className="login-link-register">
-            CADASTRAR
+            REGÍSTRESE
           </Link>
         </div>
       </form>

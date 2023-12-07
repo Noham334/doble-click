@@ -13,7 +13,7 @@ const CategoryCrudCard = ({ category, onDelete }: Props) => {
   const handleDelete = (categoryId: number) => {
     if (
       !window.confirm(
-        'Tem certeza que deseja Excluir essa categoria? Se a categoria já estiver vinculada a algum produto deverá excluir esses produtos primeiro.'
+        'Esta seguro que desea eliminar esta categoria? Si existe un producto con esta categoria, deberias eliminarlo primero.'
       )
     ) {
       return;
@@ -43,7 +43,7 @@ const CategoryCrudCard = ({ category, onDelete }: Props) => {
           onClick={() => handleDelete(category.id)}
           className="btn btn-outline-danger category-crud-card-button"
         >
-          EXCLUIR
+          ELIMINAR
         </button>
       </div>
     </div>

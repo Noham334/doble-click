@@ -64,9 +64,9 @@ const Catalog = () => {
   }, [getProducts]);
 
   return (
-    <div className="container my-4 catalog-container">
+    <div className="fluid-container p-4 catalog-container">
       <div className="catalog-bar-container">
-        <h1>Catálogo de produtos</h1>
+        <h1>Catálogo de Productos</h1>
         <ProductFilter onSubmitFilter={handleSubmitFilter} />
       </div>
 

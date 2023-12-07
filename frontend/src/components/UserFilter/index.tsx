@@ -70,7 +70,7 @@ const UserFilter = ({ onSubmitFilter }: Props) => {
             {...register('textInput')}
             type="text"
             className="form-control"
-            placeholder="Pesquisar por Nome"
+            placeholder="Buscar por Nombre"
             name="textInput"
           />
           <button className="user-filter-search-icon">
@@ -86,9 +86,9 @@ const UserFilter = ({ onSubmitFilter }: Props) => {
                 <Select
                   {...field}
                   options={[
-                    { id: 1, name: 'Mais Antigos' },
-                    { id: 2, name: 'Mais Recentes' },
-                    { id: 3, name: 'Ordem Alfabética' },
+                    { id: 1, name: 'Mas Antiguos' },
+                    { id: 2, name: 'Mas Recientes' },
+                    { id: 3, name: 'ABC...' },
                   ]}
                   isClearable
                   classNamePrefix="user-filter-select"
@@ -106,7 +106,7 @@ const UserFilter = ({ onSubmitFilter }: Props) => {
             onClick={handleFormClear}
             className="btn btn-outline-secondary btn-user-filter-clear"
           >
-            LIMPAR <span className="btn-user-filter-word">FILTRO</span>
+            LIMPIAR <span className="btn-user-filter-word">FILTRO</span>
           </button>
         </div>
       </form>

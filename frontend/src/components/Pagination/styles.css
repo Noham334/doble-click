@@ -30,7 +30,7 @@
 }
 
 .pagination-link-active {
-  background-color: #407bff;
+  background-color: #df5753;
 }
 
 .arrow-inactive {
@@ -38,7 +38,7 @@
 }
 
 .arrow-active {
-  color: #407bff;
+  color: #df5753;
 }
 
 .pagination-arrow-container {

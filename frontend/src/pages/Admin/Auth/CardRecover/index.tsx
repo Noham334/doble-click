@@ -44,13 +44,13 @@ const CardRecover = ({ onResetPassword }: Props) => {
       .then((response) => {
         onResetPassword(response.data);
         toast.info(
-          'Email para a alteração da senha enviado com Sucesso. Favor verificar seu Email!'
+          'Se envio con exito el correo para cambio de contraseña. Favor verificar su correo!'
         );
         history.push('/admin/auth/login');
       })
       .catch(() => {
         toast.error(
-          'Erro ao enviar Email de alteração da senha. Email não encontrado ou token inválido!'
+          'Error al enviar Correo de alteración de contraseña. Correo no encontrado o token inválido!'
         );
       });
   };
@@ -69,7 +69,7 @@ const CardRecover = ({ onResetPassword }: Props) => {
       )
         ? setError('email', {
             type: 'validate',
-            message: 'Os emails não correspondem',
+            message: 'Los correos no corresponden',
           })
         : clearErrors('email');
     }
@@ -78,16 +78,16 @@ const CardRecover = ({ onResetPassword }: Props) => {
   return (
     <div className="base-card recover-card-container">
       <div className="recover-card-form-container">
-        <h1>RECUPERAÇÃO DE CONTA</h1>
+        <h1>RECUPERACIÓN DE CUENTA</h1>
 
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="recover-card-input-content">
             <input
               {...register('email', {
-                required: 'Campo Obrigatório!',
+                required: 'Campo Obligatorio!',
                 pattern: {
                   value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                  message: 'Email inválido',
+                  message: 'Correo inválido',
                 },
               })}
               id="nEmail"
@@ -95,7 +95,7 @@ const CardRecover = ({ onResetPassword }: Props) => {
               className={`form-control base-input ${
                 errors.email ? 'is-invalid' : ''
               }`}
-              placeholder="Digite seu Email"
+              placeholder="Ingrese su Correo"
               name="email"
             />
             <div className="invalid-feedback d-block">
@@ -110,7 +110,7 @@ const CardRecover = ({ onResetPassword }: Props) => {
               className={`form-control base-input ${
                 errors.email ? 'is-invalid' : ''
               }`}
-              placeholder="Confirme seu Email"
+              placeholder="Confirme su Correo"
               name="confEmail"
               onChange={confirmEmail}
             />

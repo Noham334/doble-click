@@ -9,8 +9,8 @@
 		<version>2.4.4</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.devsuperior</groupId>
-	<artifactId>dscatalog</artifactId>
+	<groupId>com.dobclick</groupId>
+	<artifactId>hurtado</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>dscatalog</name>
 	<description>DSCatalog Bootcamp DevSuperior</description>

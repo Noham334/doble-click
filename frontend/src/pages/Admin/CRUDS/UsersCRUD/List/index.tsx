@@ -81,8 +81,8 @@ const List = () => {
       <div className="user-crud-content">
         <div className="user-crud-bar-container">
           <Link to="/admin/Users/create">
-            <button className="btn btn-primary text-white btn-crud-add">
-              ADICIONAR
+            <button className="btn btn-secondary text-white btn-crud-add">
+              ACTUALIZAR
             </button>
           </Link>
           <UserFilter onSubmitFilter={handleSubmitFilter} />
